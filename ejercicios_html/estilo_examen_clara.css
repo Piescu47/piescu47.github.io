@@ -1,0 +1,11 @@
+
+html {font-family: "Courier New", Courier, monospace;}
+h1, h2 {font-weight: bold;}
+h1,h2, p {color: purple}
+ol {color: green}
+#ul {color: red}
+body {background-color: rgb(217, 179, 255);}
+a:hover {background-color: orange; color: white}
+.naranja {background-color: orange;}
+a {text-decoration: none; color: purple; border: 2px solid orange; padding: 5px 10px; display: inline-block;}
+ a {border-style: dashed ; border-width: 3px; border-color: white; border-radius: 3px; background-color: lightblue;}
