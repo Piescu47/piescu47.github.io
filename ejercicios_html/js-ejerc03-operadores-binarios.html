@@ -11,8 +11,16 @@
     
 
     <script> 
-    var A = 10
-      var B = 20
+    let A=prompt("Escribe un número entero A", "10");
+
+      A=parseInt(A); // pasamos A a tipo entero
+
+      let B=prompt("Escribe otro número entero B", "20");
+
+      B=parseInt(B); // pasamos B a tipo entero
+
+      alert(A+B);
+     
     var C = A + B
       var D = A - B
       var E = A * B
@@ -23,6 +31,8 @@
        document.write("<p>El resultado de restar ",A," menos ",B, " es ",D, "</p>");
       document.write("<p> El resultado de evaluar si ",A," y ",B, " son iguales es: ",A==B,"</p>"); 
       document.write("<p> El resultado de evaluar si ",A," y ",B, " son diferentes es: ",A!=B,"</p>"); 
+      
+     
     </script>
   
   </body>
