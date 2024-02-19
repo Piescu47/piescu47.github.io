@@ -1,0 +1,102 @@
+ <!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>Heladería</title>
+     </head>
+     <body>
+       <h1>Heladería</h1>
+       
+       <form>
+
+           <label for="tamaño">Introduce un tamaño (g,m o p):</label>
+
+           <input type="text" id="tamaño" name="tamaño">
+
+
+       </form>
+
+       <form>
+
+           <label for="sabor">Introduce un sabor (fresa, chocolate, pistacho o vainilla):</label>
+
+           <input type="text" id="sabor" name="sabor">
+
+           
+
+       </form>
+       
+       <form>
+
+           <label for="topping"> Introduce un topping (oreo, coco, fruta o pepitas):</label>
+
+           <input type="text" id="topping" name="topping">
+
+         
+
+       </form>
+
+       <button onclick="precioFinal()">Calcular precio final</button>
+       
+       <script>
+           function precioFinal(){
+             var precio = 0.00;
+             
+             const tamaño = document.getElementById("tamaño").value;
+             
+             if(tamaño == "p"){
+     precio +=1;
+   } else if(tamaño == "m"){
+     precio +=2;
+   } else if (tamaño == "g"){
+     precio +=3;
+   } else{
+     document.write ("No tenemos ese tamaño de helado");
+   }
+         const sabor = document.getElementById("sabor").value;
+        
+ if(sabor == "chocolate"){
+ precio +=1;
+  } else if(sabor == "vainilla"){
+    } else if (sabor == "fresa"){
+         precio +=0;
+              }else if (sabor == "pistacho"){
+          precio +=1;
+          } else{
+        document.write ("No tenemos ese sabor de helado");
+                                            }
+
+         const topping = document.getElementById("topping").value;
+
+        
+          if(topping == "oreo"){
+               precio += 0.3;
+          } else if(topping == "pepitas"){
+            precio +=0.5;
+          } else if (topping == "fruta"){
+            precio+=0.3;
+          }else if (topping == "coco"){
+            precio+=0.5;
+           } else{
+            document.write ("No tenemos ese topping de helado");
+          }
+
+
+      var  precioFinal2 = precio 
+
+         document.write("<h1>El precio final es: " + precioFinal2 + "€</h1> <img src=/imagenes/icecream.jpg></img>");
+           }
+
+
+       </script>
+        
+
+
+     </body>
+   </html>
