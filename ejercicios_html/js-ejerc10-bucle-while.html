@@ -1,0 +1,35 @@
+<!DOCTYPE html> 
+
+<html lang="es"> 
+
+<head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Ejecutar programa JavaScript</title> 
+</head>
+<h1>Juego de adivinanza</h1>
+  <body> 
+    <script>
+      var numero_aleatorio = Math.floor(Math.random() * 10); 
+      var intentos = 5
+        
+        ; 
+      var adivinado = false; 
+      
+      while (intentos > 0 && !adivinado) { 
+        var numero_usuario = parseInt(prompt("Adivina el número (entre 1 y 10): ")); 
+        
+        if (numero_usuario === numero_aleatorio) { 
+          adivinado = true; 
+          alert("¡Felicidades! Adivinaste el número."); 
+        } else if ( numero_usuario > numero_aleatorio) {alert("El número es menor. Intenta de nuevo.")} else if ( numero_usuario < numero_aleatorio) {alert("El número es mayor. Intenta de nuevo.")} 
+        } 
+      
+      
+      
+      
+  
+      
+      
+    </script> 
+  </body>
