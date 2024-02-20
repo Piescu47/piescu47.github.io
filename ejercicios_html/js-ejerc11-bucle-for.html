@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicios JS</title>
+</head>
+  
+<body>
+
+  <h1>Multiplicar</h1>
+  <input type="number" id="numero">
+  <button onclick="mostrarTabla()">Mostrar Tabla de Multiplicar</button>
+  <div id="tabla"></div>
+
+  <h1>Factorial</h1>
+  <input type="number" id="numeroFactorial">
+  <button onclick="calcularFactorial()">Calcular Factorial</button>
+  <div id="resultadoFactorial"></div>
+
+  <h1>Número vocales</h1>
+  
+
+  <input type="text" id="inputText">
+  <button onclick="contarVocales()">Contar Vocales</button>
+  <div id="resultado"></div>
+
+ 
+  <script>
+    function mostrarTabla() {
+      let numero = document.getElementById('numero').value;
+      let tabla = "<h2>Tabla de Multiplicar del " + numero + "</h2><ul>";
+      
+      for(let i = 1; i <= 10; i++) {
+        tabla += "<li>" + numero + " x " + i + " = " + (numero * i) + "</li>";
+      }
+      
+      tabla += "</ul>";
+      document.getElementById('tabla').innerHTML = tabla;
+    }
+
+
+    
+    function calcularFactorial() {
+      let numeroFactorial = document.getElementById('numeroFactorial').value;
+      let factorial = 1;
+      for (let i = 1; i <= numeroFactorial; i++) {
+        factorial *= i;
+      }
+      document.getElementById('resultadoFactorial').innerHTML = "El factorial de " + numeroFactorial + " es: " + factorial;
+    }
+    function contarVocales() {
+      let texto = document.getElementById('inputText').value.toLowerCase();
+      let count = 0;
+
+      for (let i = 0; i < texto.length; i++) {
+        if (['a', 'e', 'i', 'o', 'u'].includes(texto[i])) {
+          count++;
+        }
+      }
+
+      document.getElementById('resultado').innerHTML = "La cantidad de vocales en la frase ingresada es: " + count;
+    }
+
+
+
+      
+    
+
+    
+  </script>
+</body>
+</html>
