@@ -1,0 +1,35 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+<h1> Esto es un títlo</h1>
+
+<p id="modi">Este es el párrafo a modificar </p>
+
+<script>
+
+const modi = document.getElementById("modi");
+
+const nuevoParrafo = document.createElement("p");
+
+for (let i = 1; i <= 10; i++) {
+
+    if (i % 2 === 0) {
+
+
+
+    nuevoParrafo.textContent = `Este es un nuevo párrafo agregado dinámicamente ${i}.`;
+
+        modi.appendChild(nuevoParrafo);
+
+    }
+
+}
+
+</script>
+
+</body>
