@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<meta  charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+     
+  </head>
+  <body>
+<h1>Proyecto guiado contador de pulsaciones con 7 segmentos</h1>
+    <p>
+      En este proyecto hemos conseguido aplicar los conocimientos de programación a la robótica, en este caso con el Arduino. Gracias a ello hemos podido hacer un contador de pulsaciones con un visualizador de 7 segmentos, empezando primeramente por entender como funcionaba el botón y lo que implicaba el proceso de programación de este. Acontinuación veremos como paso a paso logramos hacerlo.
+    </p>
+    <h2>Hardware</h2>
+
+    <h3>Botón</h3>
+     <p>
+       Primeramente, conectamos el botón al Arduino, para ello lo disponemos en la protoboard de tal manera que el botón por un lado esté conectado al pin (en este caso al 2), a una resitencia de ella a los 5V, y el otro lado esté conectado a la toma de tierra.
+      </p>
+        <img src="/arduino_fotos/IMG_20240315_083953.jpg"alt="Arduino con el botón" height="300">
+
+    <h3>Implementación de led</h3>
+    <p>Continuando con el procedimiento anteriormente citado, ahora debemos añadir una led. Para ello la conectaremos a la protoboard de tal manera que una patilla vaya de allí al pin y la otra a una resistencia y de ella a la toma de tierra.
+      </p>
+        <img src="/arduino_fotos/IMG_20240318_140546.jpg"alt="Arduino botón y led" height="300">
+
+    <h3>Proyecto final</h3>
+    <p>Para finalizar, ahora lo único que nos queda por implementar es el visualizador de 7 segmentos, de tal manera que las patillas centrales vayan conectadas a dos resistencias (cada una a una) y de ahí a la toma de tierra. El resto de pines van conectados como se quiera a los pines del Arduino.
+      </p>
+        <img src="/arduino_fotos/Captura de pantalla 2024-03-30 192912.png"alt="Arduino contador 7 segmentos" height="300">
+
+
+
+
+    <h2>Software</h2>
+
+    <h3>Botón</h3>
+     <p>
+       Este código sirve para que cada vez que se reciba una pulsación del botón sea mostrada a su vez en el serial del programa. De esta manera contaría las veces que esto ocurre hasta llegar a 9, una vez allí se reinicia y vuelve a contar desde 0. 
+      </p>
+        <img src="/arduino_fotos/image.png"alt="Programación arduino botón" height="300">
+
+    <h3>Implementación de led</h3>
+    <p>
+      Para el siguiente código lo que conseguimos es que al pulsar el botón se encienda la led 10ms y luego se apague.
+      </p>
+        <img src="/arduino_fotos/Captura de pantalla 2024-03-30 193729.png"alt="Código Arduino botón led" height="300">
+
+    <h3>Proyecto final</h3>
+    <p>
+      Para finalizar, este código sirve para mostrar el valor almacenado en la variable count donde alojamos el número de pulsaciones así hasta llegar a 9, que se reiniciaría la cuenta como hemos visto anteriormente. Para ello es necesario definir los pines donde conectamos el display en nuestro void setup() {}. Luego, en el void loop(){} deberemos incluir, tras la modificación del valor de variable count con la pulsación de botón, una estructura condicional, por ejemplo un switch, que encienda los leds que representen el dígito que corresponda a esa variable. Y en cada caso definimos el segmento que ha de permanecer encendido o pagado con los Case, uno para cada número.
+      </p>
+        <img src="/arduino_fotos/Captura de pantalla 2024-03-30 192826.png" alt="Código Arduino contador 7 segmentos" height="300">
+     <img src="/arduino_fotos/Captura de pantalla 2024-03-30 192845.png" alt="Código Arduino contador 7 segmentos" height="300">
+    
+     <img src="/arduino_fotos/Captura de pantalla 2024-03-30 192858.png" alt="Código Arduino contador 7 segmentos" height="300">
+       
